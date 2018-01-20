@@ -2,8 +2,8 @@
 
 <body>
 	<!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio -->
-	<form id="form1" action="myFunction(var value)">
-		<select id="Groups">
+	<form id="form1" onclick="myFunction()">
+		<select id="groups">
 			<option value="index1">Group 1</option>
 			<!--Connects to Nikhil's website-->
 			<option value="index2">Group 2</option>
@@ -15,11 +15,9 @@
 
 <script>
 	function myFunction(){
-		var e = document.getElementById("Groups");
-		console.log(e);
-		var strIndex = e.selectedIndex.value;
-		console.log(strIndex);
-		//window.location = "https://ttefera.github.io/" + strIndex;
+		var e = document.getElementById("groups");
+		var index = e.selectedIndex;
+		window.location = "https://ttefera.github.io/" + e.options[index].value;
 	}
 
 </script>
