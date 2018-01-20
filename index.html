@@ -1,0 +1,29 @@
+<html>
+
+<body>
+	<!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio -->
+	<form id="form1" action = "https://169.233.234.188:8000">
+		<select name="Study Group">
+			<option value="169.233.234.188:8000">Nikhil</option> <!--Connects to Nikhil's website-->
+		</select>
+		<input type = "submit">
+	</form>
+	<form id="form2" action = "https://169.233.234.188:8000">
+		<select name="Study Group">
+			<option value="169.233.234.188:8000">Zain</option> <!--Connects to Nikhil's website-->
+		</select>
+		<input type = "submit">
+	</form>
+	<form id="form3" action = "https://169.233.234.188:8080">
+		<select name="Study Group">
+			<option value="169.233.234.188:8000">Vishal</option> <!--Connects to Nikhil's website-->
+		</select>
+		<input type = "submit">
+	</form>
+	<script> if(document.getElementById("form1").value == "169.233.234.188:8080"){
+		document.getElementById("form1").innerHTML = 5 + 6;
+	}
+	</script>
+</body>
+
+</html>
