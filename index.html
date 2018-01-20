@@ -2,24 +2,22 @@
 
 <body>
 	<!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio -->
-	<form id="form1" action="https://ttefera.github.io/index1">
-		<select name="Group 1">
-			<option value="169.233.234.188:8000">Group 1</option> <!--Connects to Nikhil's website-->
+	<form id="form1" action="myFunction(var value)">
+		<select id="Groups">
+			<option value="index1">Group 1</option> <!--Connects to Nikhil's website-->
+			<option value="index2">Group 2</option>
+			<option value="index3">Group 3</option>
 		</select>
 		<input type = "submit">
-	</form>
-	<form id="form2" action="https://ttefera.github.io/index2">
-		<select name="Group 2">
-			<option value="169.233.234.188:8000">Group 2</option> <!--Connects to Nikhil's website-->
-		</select>
-		<input type = "submit">
-	</form>
-	<form id="form3" action="https://ttefera.github.io/index3">
-		<select name="Group 3">
-			<option value="169.233.234.188:8000">Group 3</option> <!--Connects to Nikhil's website-->
-		</select>
-		<input type="submit">
 	</form>
 </body>
+
+<script>
+	var e = document.getElementById("Groups");
+	var strIndex = e.options[e.selectedIndex].value;
+	//myFunction(value) {
+	window.redirect("https://ttefera.github.io/" + strIndex);
+	//};
+</script>
 
 </html>
