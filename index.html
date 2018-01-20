@@ -9,14 +9,15 @@
 			<option value="index2">Group 2</option>
 			<option value="index3">Group 3</option>
 		</select>
-		<input id="submit" type="button" value="submit" onclick="myFunction();" />
+		<input id="submit" type="button" value="submit" onclick="myFunction()" />
 	</form>
 </body>
 
 <script>
 	function myFunction(){
 		var e = document.getElementById("Groups");
-		var strIndex = e.options[e.selectedIndex].value;
+		var strIndex = e.selectedIndex.value;
+		console.log(strIndex);
 		window.location = "https://ttefera.github.io/" + strIndex;
 	}
 
