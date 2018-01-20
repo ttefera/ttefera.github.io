@@ -1,29 +1,32 @@
 <html>
-
 <body>
-	<!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio -->
-	<form id="form1" action = "https://169.233.234.188:8000">
-		<select name="Study Group">
-			<option value="169.233.234.188:8000">Nikhil</option> <!--Connects to Nikhil's website-->
-		</select>
-		<input type = "submit">
-	</form>
-	<form id="form2" action = "https://169.233.234.188:8000">
-		<select name="Study Group">
-			<option value="169.233.234.188:8000">Zain</option> <!--Connects to Nikhil's website-->
-		</select>
-		<input type = "submit">
-	</form>
-	<form id="form3" action = "https://169.233.234.188:8080">
-		<select name="Study Group">
-			<option value="169.233.234.188:8000">Vishal</option> <!--Connects to Nikhil's website-->
-		</select>
-		<input type = "submit">
-	</form>
-	<script> if(document.getElementById("form1").value == "169.233.234.188:8080"){
-		document.getElementById("form1").innerHTML = 5 + 6;
-	}
-	</script>
-</body>
-
+    <script src="https://static.opentok.com/v2/js/opentok.js" charset="utf-8"></script>
+    <script charset="utf-8">
+      var apiKey = '45828062';
+      var sessionId = '2_MX40NTgyODA2Mn5-MTUxNjQ2MDgzNzg1OX4xYTlJUHZsRVBqTXg2d3hEQjNsRWFOQXl-UH4';
+      var token = 'T1==cGFydG5lcl9pZD00NTgyODA2MiZzaWc9YTkxMTM4NWQ5OWM3YTVjN2U0NDA4ZTcwZGE0YTg1ZWQ1YWU1NDRjYjpzZXNzaW9uX2lkPTJfTVg0ME5UZ3lPREEyTW41LU1UVXhOalEyTURnek56ZzFPWDR4WVRsSlVIWnNSVkJxVFhnMmQzaEVRak5zUldGT1FYbC1VSDQmY3JlYXRlX3RpbWU9MTUxNjQ2MDgzOSZub25jZT0wLjg3NjAyMTkxNzI1NTAzNTQmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTUxNjU0NzIzOQ==';
+      var session = OT.initSession(apiKey, sessionId)
+        .on('streamCreated', function(event) {
+          session.subscribe(event.stream);
+        })
+        .connect(token, function(error) {
+          var publisher = OT.initPublisher();
+          session.publish(publisher);
+        });
+    </script>
+  <p>Great work! You now have 2 clients publishing and subscribing.<br><strong>Click back to the previous Hello World tab in your browser to continue.</strong></p>
+  </body>
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+<style>
+  body {
+    font-family: Muli, Arial;
+  }
+  strong {
+    color: #09c;
+  }
+  .OT_publisher {
+    float:left;
+    margin-right: 5px;
+  }
+ </style>
 </html>
