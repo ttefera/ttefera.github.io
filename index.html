@@ -1,35 +1,62 @@
 <html>
 
 <body>
-	<h1 style="text-align: center; margin-top: 5%">Let's Meet</h1>
+	<h1 class="title" style="text-align: center; margin-top: 5%">Let's Meet</h1>
 	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 	<!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio -->
 	<div style="width: 60%; margin: auto; text-align: center">
-		<form id="form1">
+		<!-- <form id="form1">
 			<select id="groups">
 				<option value="index1">Group 1</option>
-				<!--Connects to Nikhil's website-->
 				<option value="index2">Group 2</option>
 				<option value="index3">Group 3</option>
 			</select>
 			<input id="submit" type="button" value="submit" onclick="myFunction()"/>
-		</form>
+		</form> -->
+		<div class="box">
+			<h1><a href="https://ttefera.github.io/index1">Group 1</a></h1>
+		</div>
+		<div class="box">
+			<h1><a href="https://ttefera.github.io/index2">Group 2</a></h1>
+		</div>
+		<div class="box">
+			<h1><a href="https://ttefera.github.io/index3">Group 3</a></h1>
+		</div>
 	</div>
 </body>
 
-<script>
+<!-- <script>
 	function myFunction(){
 		var e = document.getElementById("groups");
 		var index = e.selectedIndex;
 		window.location = "https://ttefera.github.io/" + e.options[index].value;
 	}
-
-</script>
-<style>
+</script> -->
+<!-- <style>
 	html {
 		font-family: 'Dosis', sans-serif;
 		background: #d6fffa
 	}
-</style>
+	input {
+		padding: 2px 13px;
+		font-family: inherit;
+		border-radius: 25px;
+		font-size: 1.2em;
+	}
+
+	input:hover {
+		background-color: #d6fffa;
+		color: #2cd7ea;
+		border: none;
+	}
+
+	select {
+		width: 50%;
+		height: 30px;
+		text-align: center;
+	}
+
+</style> -->
 
 </html>

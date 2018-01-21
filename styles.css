@@ -1,0 +1,56 @@
+html {
+  font-family: 'Dosis', sans-serif;
+  //background: #d6fffa;
+}
+input {
+  padding: 2px 13px;
+  font-family: inherit;
+  border-radius: 25px;
+  font-size: 1.2em;
+}
+
+input:hover {
+  background-color: black;
+  color: white;
+}
+
+select {
+  background-color: white;
+  width: 50%;
+  height: 30px;
+  text-align: center;
+}
+
+.box {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: inline-block;
+  margin: 3%;
+  cursor: pointer;
+}
+
+.box h1 {
+  padding-top: 80px;
+  font-weight: 100;
+}
+
+.box:hover {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.box:hover a {
+  color: white;
+}
+
+.title {
+  font-size: 3em;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
